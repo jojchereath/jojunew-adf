@@ -1,0 +1,9 @@
+{
+	"name": "jojunew-adf",
+	"location": "canadacentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "62e1d019-306d-4c72-bd60-5cf1c9f679cc",
+		"tenantId": "9b564d2f-7c67-47bc-97a6-2e701e15f229"
+	}
+}
