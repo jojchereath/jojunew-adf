@@ -1,0 +1,7 @@
+{
+	"name": "JojuLaptopIntegrationRuntime",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "Self-hosted integration runtime running on Jojus Laptop"
+	}
+}
