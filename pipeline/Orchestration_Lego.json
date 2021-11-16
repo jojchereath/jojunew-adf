@@ -14,6 +14,20 @@
 					},
 					"waitOnCompletion": true
 				}
+			},
+			{
+				"name": "Execute ADLS to ASQL",
+				"description": "ADLS to ASQL table",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Lego_HTTP_to_ADLS_Themes",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
 			}
 		],
 		"annotations": []
