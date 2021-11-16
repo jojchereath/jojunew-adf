@@ -1,6 +1,17 @@
 {
 	"name": "Orchestration_Lego",
 	"properties": {
+		"activities": [
+			{
+				"name": "Execute HTTP to ADLS",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitOnCompletion": true
+				}
+			}
+		],
 		"annotations": []
 	}
 }
