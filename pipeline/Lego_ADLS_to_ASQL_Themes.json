@@ -1,0 +1,9 @@
+{
+	"name": "Lego_ADLS_to_ASQL_Themes",
+	"properties": {
+		"description": "Adding Dataflows to a pipelines",
+		"annotations": [
+			"Dataflow testing"
+		]
+	}
+}
