@@ -1,0 +1,16 @@
+{
+	"name": "ASLQ_Lego_Themes",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ASQL_jojunew_Entertainment",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "lego",
+			"table": "themes"
+		}
+	}
+}

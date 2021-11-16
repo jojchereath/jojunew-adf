@@ -1,7 +1,7 @@
 {
-	"name": "dataflow1",
+	"name": "Lego_Themes",
 	"properties": {
-		"description": "Dataflow ",
+		"description": "Lego Themes Dataflow ",
 		"type": "MappingDataFlow",
 		"typeProperties": {
 			"sources": [
@@ -9,13 +9,21 @@
 					"name": "ADLSLegoThemes"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "ASLQ_Lego_Themes",
+						"type": "DatasetReference"
+					},
+					"name": "ASQLLegoThemes"
+				}
+			],
 			"transformations": [
 				{
 					"name": "AddLoadDate"
 				}
 			],
-			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false) ~> ADLSLegoThemes\nADLSLegoThemes derive(load_date = ERROR_FUNCTION('currentDate(string)')) ~> AddLoadDate"
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false) ~> ADLSLegoThemes\nADLSLegoThemes derive(load_date = ERROR_FUNCTION('currentDate(string)')) ~> AddLoadDate\nAddLoadDate sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\ttruncate:true,\n\tformat: 'table',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\terrorHandlingOption: 'stopOnFirstError') ~> ASQLLegoThemes"
 		}
 	}
 }
