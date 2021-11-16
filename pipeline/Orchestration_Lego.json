@@ -19,7 +19,14 @@
 				"name": "Execute ADLS to ASQL",
 				"description": "ADLS to ASQL table",
 				"type": "ExecutePipeline",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Execute HTTP to ADLS",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
