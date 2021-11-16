@@ -2,6 +2,29 @@
 	"name": "Lego_ADLS_to_ASQL_Themes",
 	"properties": {
 		"description": "Adding Dataflows to a pipelines",
+		"activities": [
+			{
+				"name": "Lego_ADLS_to_ASQL_Themes",
+				"description": "Extract Themes data from Azure Data Lake Storage, add a column and load the data into Azure SQL Database",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "1.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
 		"annotations": [
 			"Dataflow testing"
 		]
