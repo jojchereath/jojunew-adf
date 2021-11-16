@@ -12,10 +12,10 @@
 			"sinks": [],
 			"transformations": [
 				{
-					"name": "AddColumn"
+					"name": "AddLoadDate"
 				}
 			],
-			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false) ~> ADLSLegoThemes\nADLSLegoThemes derive(load_date = ERROR_FUNCTION('')) ~> AddColumn"
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false) ~> ADLSLegoThemes\nADLSLegoThemes derive(load_date = ERROR_FUNCTION('currentDate(string)')) ~> AddLoadDate"
 		}
 	}
 }
