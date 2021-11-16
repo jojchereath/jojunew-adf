@@ -8,6 +8,10 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Lego_HTTP_to_ADLS_Themes",
+						"type": "PipelineReference"
+					},
 					"waitOnCompletion": true
 				}
 			}
