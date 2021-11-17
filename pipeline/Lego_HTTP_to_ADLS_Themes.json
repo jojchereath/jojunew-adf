@@ -98,8 +98,11 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "HTTP_Lego_Themes",
-						"type": "DatasetReference"
+						"referenceName": "HTTP_Lego",
+						"type": "DatasetReference",
+						"parameters": {
+							"FileName": "FileName"
+						}
 					}
 				],
 				"outputs": [
