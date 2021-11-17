@@ -2,7 +2,10 @@
 	"name": "pipeline1",
 	"properties": {
 		"parameters": {
-			"Execution Date": {
+			"Starttime": {
+				"type": "string"
+			},
+			"Endtime": {
 				"type": "string"
 			}
 		},
